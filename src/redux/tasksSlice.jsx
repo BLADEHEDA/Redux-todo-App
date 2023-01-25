@@ -2,8 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const tasksSlice = createSlice({
     name: "tasks",
-    initialState:[],
+    initialState:[ ],
     reducers:{
+        // the lines below adds tasks 
         addTask: (state, action)=>{
             const newTask = {
                 id: new Date(),
@@ -11,12 +12,18 @@ export const tasksSlice = createSlice({
             }
             state.push(newTask);
         },
+        // the lines bbelow removes task
         deleteTask: (state, action)=>{
             return state.filter((item) => item.id !== action.payload.id);
+        },
+        // the lines bbelow removes task
+       clearAll: (state, action)=>{
+            return state.initialState;
         }
+     
     }
 });
 
-export const {addTask, deleteTask} = tasksSlice.actions;
+export const {addTask, deleteTask,clearAll} = tasksSlice.actions;
 
 export default tasksSlice.reducer;

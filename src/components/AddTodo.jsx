@@ -4,6 +4,7 @@ import { addTask } from "../redux/tasksSlice";
 
 
 const AddTodo = () => {
+
 	const [value, setValue] = useState('');
 
 	const dispatch = useDispatch();
@@ -33,10 +34,12 @@ const AddTodo = () => {
 
 	return (
 		<div className="add-todo">
-			<form action=""onSubmit={onSubmit} >
+			<form action=""onSubmit={onSubmit} className="form" >
 				<input type="text" className="task-input" 	placeholder="Add task" value={value} onChange={handleChange}></input>	
 					<button className="task-button">Add</button>
+					
 			</form>
+		
 		</div>
 	);
 };
