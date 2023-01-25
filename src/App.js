@@ -5,8 +5,6 @@ import { clearAll } from "./redux/tasksSlice"
 import { useDispatch } from 'react-redux';
 import "./App.css"
 
-
-
 const App = () => {
 
 		// the lines below clears all the tasks 

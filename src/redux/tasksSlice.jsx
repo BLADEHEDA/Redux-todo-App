@@ -18,7 +18,7 @@ export const tasksSlice = createSlice({
         },
         // the lines bbelow removes task
        clearAll: (state, action)=>{
-            return state.initialState;
+            return state=[];
         }
      
     }
