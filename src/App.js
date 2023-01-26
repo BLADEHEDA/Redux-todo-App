@@ -21,7 +21,7 @@ const App = () => {
 			<h1 className="app-title">My Tasks</h1>
 			<AddTodo />
 			<TodoList />
-			<button className="clear-clearAll" onClick={deleteAll} >clear All</button>
+			 <button className="clear-clearAll" onClick={deleteAll} >clear All</button>
 		</div>
 	);
 };

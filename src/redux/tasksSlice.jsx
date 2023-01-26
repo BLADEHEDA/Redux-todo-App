@@ -10,7 +10,7 @@ const initialState=[
 export const tasksSlice = createSlice({
     name: "tasks",
     initialState,
-    reducers:{  
+    reducers:{
         // the lines below adds tasks 
         addTask: (state, action)=>{
             const newTask = {
