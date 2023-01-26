@@ -9,10 +9,8 @@ const initialState=[
 
 export const tasksSlice = createSlice({
     name: "tasks",
-    // i am changing the initial state to look like my created object 
-    // initialState:[ ],
     initialState,
-    reducers:{
+    reducers:{  
         // the lines below adds tasks 
         addTask: (state, action)=>{
             const newTask = {
