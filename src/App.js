@@ -10,7 +10,9 @@ const App = () => {
 		// the lines below clears all the tasks 
 		const deleteAll=()=>{
 			dispatch(
-				clearAll()
+				clearAll({
+					
+				})
 			)
 		}
 

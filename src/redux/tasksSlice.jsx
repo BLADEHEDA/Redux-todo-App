@@ -1,8 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// ket me tru to give an initialstate to my app 
+const initialState=[
+    { id:"1", name:"Become a software developer"    },
+    {  id:"2", name:"learn and understand redu" }
+]
+
+
 export const tasksSlice = createSlice({
     name: "tasks",
-    initialState:[ ],
+    // i am changing the initial state to look like my created object 
+    // initialState:[ ],
+    initialState,
     reducers:{
         // the lines below adds tasks 
         addTask: (state, action)=>{
@@ -18,7 +27,8 @@ export const tasksSlice = createSlice({
         },
         // the lines bbelow removes task
        clearAll: (state, action)=>{
-            return state=[];
+        let initialstate=[];
+            return initialState;
         }
      
     }
