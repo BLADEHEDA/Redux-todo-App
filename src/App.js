@@ -6,14 +6,14 @@ import { useDispatch } from 'react-redux';
 import "./App.css"
 
 const App = () => {
-
+	const dispatch = useDispatch();
 		// the lines below clears all the tasks 
 		const deleteAll=()=>{
+			alert("yo");
 			dispatch(
-				clearAll({
-					
-				})
+			clearAll()
 			)
+			
 		}
 
 	return (

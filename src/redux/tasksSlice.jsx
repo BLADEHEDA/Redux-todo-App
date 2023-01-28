@@ -2,11 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // ket me tru to give an initialstate to my app 
 const initialState=[
-    { id:"1", name:"Become a software developer"    },
-    {  id:"2", name:"learn and understand redu" }
+    { id:"1", name:"Become a software developer"  ,completed: false   },
+    {  id:"2", name:"learn and understand redu",completed: false  }
 ]
-
-
 export const tasksSlice = createSlice({
     name: "tasks",
     initialState,
@@ -15,7 +13,8 @@ export const tasksSlice = createSlice({
         addTask: (state, action)=>{
             const newTask = {
                 id: new Date(),
-                name: action.payload.task
+                name: action.payload.task,
+                completed: false 
             }
             state.push(newTask);
         },
@@ -25,9 +24,16 @@ export const tasksSlice = createSlice({
         },
         // the lines bbelow removes task
        clearAll: (state, action)=>{
-        let initialstate=[];
-            return initialState;
-        }
+       
+            return state=  [];
+        },
+
+        //toggle completeed tyasks 
+
+toggleComplete: (state, action) => {
+    const index = state.findIndex((todo) => todo.id === action.payload.id);
+    state[index].completed = action.payload.completed;
+},
      
     }
 });
