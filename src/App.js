@@ -9,11 +9,10 @@ const App = () => {
 	const dispatch = useDispatch();
 		// the lines below clears all the tasks 
 		const deleteAll=()=>{
-			alert("yo");
+			alert("Warning: Remove Allitems from Liat ??");
 			dispatch(
 			clearAll()
-			)
-			
+			)	
 		}
 
 	return (
