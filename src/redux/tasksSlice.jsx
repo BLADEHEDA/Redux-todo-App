@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// ket me tru to give an initialstate to my app 
+// The initialstate  initialstate of my app 
 const initialState=[
     { id:"1", name:"Become a software developer"  ,completed: false   },
     {  id:"2", name:"learn and understand redux",completed: false  }
@@ -8,6 +8,7 @@ const initialState=[
 export const tasksSlice = createSlice({
     name: "tasks",
     initialState,
+    // setup the reducers of the app which are the various  functionalities of our App 
     reducers:{
         // the lines below adds tasks 
         addTask: (state, action)=>{
