@@ -5,7 +5,7 @@ const initialState=[
     { id:"1", name:"Become a software developer"  ,completed: false   },
     {  id:"2", name:"learn and understand redux",completed: false  }
 ]
-export const tasksSlice = createSlice({
+const tasksSlice = createSlice({
     name: "tasks",
     initialState,
     // setup the reducers of the app which are the various  functionalities of our App 
@@ -28,16 +28,14 @@ export const tasksSlice = createSlice({
        
             return state=  [];
         },
-        //toggle completeed tyasks 
-
-toggleComplete: (state, action) => {
-    const index = state.findIndex((todo) => todo.id === action.payload.id);
-    state[index].completed = action.payload.completed;
-},
+            //toggle completeed tyasks 
+        toggleComplete: (state, action) => { 
+        state.completed = action.payload.completed;
+    },
      
     }
 });
 
-export const {addTask, deleteTask,clearAll} = tasksSlice.actions;
+export const {addTask, deleteTask,clearAll,toggleComplete} = tasksSlice.actions;
 
 export default tasksSlice.reducer;
